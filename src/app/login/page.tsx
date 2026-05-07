@@ -8,28 +8,29 @@ import FooterBaseReveal from '@/components/sections/footer/FooterBaseReveal';
 
 const navItems = [
   { name: "Home", id: "/" },
-  { name: "Trending", id: "/#trending" },
-  { name: "Movies", id: "/#movies" },
-  { name: "Contact Us", id: "/contact" },
+  { name: "Contact", id: "/contact" },
   { name: "Login", id: "/login" }
 ];
 
 export default function LoginPage() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
       <ReactLenis root>
-        <NavbarStyleApple navItems={navItems} brandName="AnimeVerse" />
-        <div className="min-h-screen flex items-center justify-center pt-20">
-            <ContactCenter 
-                title="Login"
-                description="Access your account and continue watching."
-                tag="Auth"
-                buttonText="Sign In"
-                background={{ variant: "plain" }}
-                useInvertedBackground={false}
-            />
+        <div id="nav" data-section="nav">
+           <NavbarStyleApple navItems={navItems} brandName="AnimeVerse" />
         </div>
-        <FooterBaseReveal logoText="AnimeVerse" columns={[]} />
+        <div id="login" data-section="login">
+          <ContactCenter 
+              title="Login"
+              description="Access your account and continue watching."
+              tag="Auth"
+              background={{ variant: "plain" }}
+              useInvertedBackground={false}
+          />
+        </div>
+        <div id="footer" data-section="footer">
+           <FooterBaseReveal logoText="AnimeVerse" columns={[]} />
+        </div>
       </ReactLenis>
     </ThemeProvider>
   );
