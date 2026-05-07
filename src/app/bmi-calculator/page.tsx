@@ -17,11 +17,13 @@ export default function BMICalculator() {
   };
 
   return (
-    <ThemeProvider>
-      <NavbarStyleApple 
-        navItems={[{name: "Home", id: "/"}, {name: "Pricing", id: "/membership-plans"}, {name: "Nutrition", id: "/diet-nutrition"}, {name: "BMI Calculator", id: "/bmi-calculator"}]}
-        brandName="AnimeVerse" 
-      />
+    <ThemeProvider defaultButtonVariant="hover-magnetic" defaultTextAnimation="entrance-slide" borderRadius="rounded" contentWidth="medium" sizing="medium" background="circleGradient" cardStyle="glass-elevated" primaryButtonStyle="gradient" secondaryButtonStyle="glass" headingFontWeight="normal">
+      <div id="nav" data-section="nav">
+        <NavbarStyleApple 
+          navItems={[{name: "Home", id: "/"}, {name: "Pricing", id: "/membership-plans"}, {name: "Nutrition", id: "/diet-nutrition"}, {name: "BMI Calculator", id: "/bmi-calculator"}]}
+          brandName="AnimeVerse" 
+        />
+      </div>
       <div className="pt-32 pb-20 px-6 max-w-2xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-6">BMI Calculator</h1>
         <div className="flex flex-col gap-4 mb-6">
